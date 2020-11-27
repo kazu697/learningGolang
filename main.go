@@ -26,4 +26,17 @@ func main() {
 	}
 
 	fmt.Printf("構造体の表示%#v\n", p)
+
+	// 関数実行
+	fmt.Printf("関数の返り値表示：%v\n", addOne(1))
+
+	printf("method形式")
+}
+
+func addOne(i int) int {
+	return i + 1
+}
+
+func printf(word string) {
+	fmt.Printf("%s\n", word)
 }
