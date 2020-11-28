@@ -35,6 +35,8 @@ func main() {
 	array()
 
 	forLoop(10)
+
+	ifsentence("aaa")
 }
 
 func addOne(i int) int {
@@ -83,5 +85,13 @@ func forLoop(loopNum int) {
 	arrayWord := []string{"Golang", "forLoop", "Test"}
 	for a, b := range arrayWord {
 		fmt.Println(a, b)
+	}
+}
+
+func ifsentence(arg string) {
+	if v := "Go"; v == arg {
+		fmt.Println(v)
+	} else {
+		fmt.Println("not Go")
 	}
 }
