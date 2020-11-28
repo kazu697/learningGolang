@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 type Person struct {
-	name string
-	age int
+	name   string
+	age    int
 	height int
 }
 
@@ -20,8 +20,8 @@ func main() {
 
 	// 構造体に値を入力
 	p := Person{
-		name: "bob",
-		age: 24,
+		name:   "bob",
+		age:    24,
 		height: 169,
 	}
 
@@ -31,6 +31,8 @@ func main() {
 	fmt.Printf("関数の返り値表示：%v\n", addOne(1))
 
 	printf("method形式")
+
+	fmt.Printf("配列： %v\n", array())
 }
 
 func addOne(i int) int {
@@ -39,4 +41,13 @@ func addOne(i int) int {
 
 func printf(word string) {
 	fmt.Printf("%s\n", word)
+}
+
+func array() [2]string {
+	// 配列の宣言方法
+	var arr [2]string
+	arr[0] = "Golang"
+	arr[1] = "learning"
+	return arr
+
 }
