@@ -32,7 +32,7 @@ func main() {
 
 	printf("method形式")
 
-	fmt.Printf("配列： %v\n", array())
+	array()
 }
 
 func addOne(i int) int {
@@ -43,11 +43,13 @@ func printf(word string) {
 	fmt.Printf("%s\n", word)
 }
 
-func array() [2]string {
+func array() {
 	// 配列の宣言方法
 	var arr [2]string
+	arr2 := [...]string{"array", "start"}
 	arr[0] = "Golang"
 	arr[1] = "learning"
-	return arr
+	fmt.Printf("配列1: %v\n", arr)
+	fmt.Printf("配列2: %v\n", arr2)
 
 }
