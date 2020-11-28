@@ -52,4 +52,21 @@ func array() {
 	fmt.Printf("配列1: %v\n", arr)
 	fmt.Printf("配列2: %v\n", arr2)
 
+	// スライスの生成
+	// スライスは後で追加ができる
+	var slice []string = []string{"Golang", "slice"}
+	fmt.Printf("slice: %v\n", slice)
+	newSlice := append(slice, "append")
+	fmt.Printf("newSlice: %v\n", newSlice)
+
+	slicePart := newSlice[:2]
+	fmt.Printf("slicePart: %v\n", slicePart)
+	fmt.Printf("slicePart length: %v\n", len(slicePart))
+	fmt.Printf("slicePart capacity: %v\n", cap(slicePart))
+
+	var sliceNil []int
+	if sliceNil == nil {
+		fmt.Println(nil)
+	}
+
 }
