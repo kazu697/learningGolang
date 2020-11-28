@@ -37,6 +37,10 @@ func main() {
 	forLoop(10)
 
 	ifsentence("aaa")
+
+	p.height = p.changeHeight(10)
+
+	fmt.Printf("高さ変更： %#v\n", p)
 }
 
 func addOne(i int) int {
@@ -94,4 +98,9 @@ func ifsentence(arg string) {
 	} else {
 		fmt.Println("not Go")
 	}
+}
+
+// 構造体の中に関数を定義する
+func (p *Person) changeHeight(h int) int {
+	return p.height + h
 }
