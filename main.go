@@ -33,6 +33,8 @@ func main() {
 	printf("method形式")
 
 	array()
+
+	forLoop(10)
 }
 
 func addOne(i int) int {
@@ -69,4 +71,17 @@ func array() {
 		fmt.Println(nil)
 	}
 
+}
+
+func forLoop(loopNum int) {
+	sum := 0
+	for i := 0; i < loopNum; i++ {
+		sum += 1
+	}
+	fmt.Println(sum)
+
+	arrayWord := []string{"Golang", "forLoop", "Test"}
+	for a, b := range arrayWord {
+		fmt.Println(a, b)
+	}
 }
