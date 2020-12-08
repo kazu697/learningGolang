@@ -48,6 +48,14 @@ func main() {
 
 	s := []int{1, 2, 3, 4, 5}
 	fmt.Println(app.Average(s))
+
+	// packageからApp Structを呼び出す
+	app1 := app.App{Num: 1}
+	fmt.Println(app1)
+
+	fmt.Println(app.Public)
+	// 先頭を小文字にすると呼び出せなくなる
+	// fmt.Println(app.private)
 }
 
 func addOne(i int) int {
