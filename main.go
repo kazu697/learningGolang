@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/kazu697/learningGolang/app"
+)
 
 type Person struct {
 	name   string
@@ -41,6 +45,9 @@ func main() {
 	p.height = p.changeHeight(10)
 
 	fmt.Printf("高さ変更： %#v\n", p)
+
+	s := []int{1, 2, 3, 4, 5}
+	fmt.Println(app.Average(s))
 }
 
 func addOne(i int) int {
